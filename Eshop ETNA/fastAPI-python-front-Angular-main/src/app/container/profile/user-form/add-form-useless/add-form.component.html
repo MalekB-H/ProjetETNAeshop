@@ -1,0 +1,30 @@
+<div class="container" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+
+        <div class="col-4">
+                <div class="form-outline mb-4">
+                <input [(ngModel)]="addr.road" type="text" id="form2Example1" class="form-control"/>
+                <label class="form-label" for="form2Example1">Road</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="addr.postaleCode" type="text" id="form2Example2" class="form-control"/>
+                    <label class="form-label" for="form2Example2">Postal Code</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="addr.city" type="text" id="form2Example2" class="form-control"/>
+                    <label class="form-label" for="form2Example2">City</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="addr.country" type="text" id="form2Example2" class="form-control"/>
+                    <label class="form-label" for="form2Example2">Country</label>
+                </div>
+
+                <!-- Submit button -->
+                <button class="btn btn-primary btn-block col-12" (click)="Add()">Add</button>
+
+        </div>
+    </div>
+</div>

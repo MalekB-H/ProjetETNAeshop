@@ -1,0 +1,59 @@
+<mat-expansion-panel *ngIf="categories" class="bg-slate-200 mb-3">
+    <mat-expansion-panel-header>
+      <mat-panel-title> BRAND </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-selection-list [multiple]="true">
+      <mat-list-option *ngFor="let category of categories" [value]="category">
+        <button (click)="onShowCategory(category)">{{ category }}</button>
+      </mat-list-option>
+    </mat-selection-list>
+</mat-expansion-panel>
+
+<mat-expansion-panel class="bg-slate-200 mb-3">
+  <mat-expansion-panel-header>
+    <mat-panel-title> COLOR </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-selection-list [multiple]="true">
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #000000;"></i>
+      </button>
+    </mat-list-option>
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #ffffff;"></i>
+      </button>
+    </mat-list-option>
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #ff0000;"></i>
+      </button>
+    </mat-list-option>
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #00ff2A;"></i>
+      </button>
+    </mat-list-option>
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #eeff00;"></i>
+      </button>
+    </mat-list-option>
+    <mat-list-option>
+      <button>
+        <i class="fa-solid fa-circle" style="color: #0055ff;"></i>
+      </button>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-expansion-panel>
+
+<mat-expansion-panel class="bg-slate-200 mb-3">
+  <mat-expansion-panel-header>
+    <mat-panel-title> SIZE </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-selection-list [multiple]="true">
+    <mat-list-option *ngFor="let size of sizes" [value]="size">
+      <button (click)="onShowSize(size)">{{ size }}</button>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-expansion-panel>

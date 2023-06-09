@@ -1,0 +1,40 @@
+<mat-card class="max-w-7xl mx-auto border-x min-h-full">
+    <div class="container" style="padding: 5%;">
+        <div class="row justify-content-md-center">
+
+            <div class="col-4">
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="product.name" type="text" id="form2Example1" class="form-control">
+                    <label class="form-label" for="form2Example1">Title</label>
+                </div>
+                
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="product.description" type="text" id="form2Example1" class="form-control">
+                    <label class="form-label" for="form2Example1">Description</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="product.price" type="text" id="form2Example1" class="form-control">
+                    <label class="form-label" for="form2Example1">Price</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="product.image" type="text" id="form2Example1" class="form-control">
+                    <label class="form-label" for="form2Example1">image URL</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input [(ngModel)]="product.inventory" type="text" id="form2Example1" class="form-control">
+                    <label class="form-label" for="form2Example1">Inventory</label>
+                </div>
+
+                <!--Submit button-->
+                <button class="btn btn-primary btn-block col-12" (click)="addProduct()">Add</button>
+
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+

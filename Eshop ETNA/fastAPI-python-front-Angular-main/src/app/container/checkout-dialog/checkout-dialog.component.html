@@ -1,0 +1,39 @@
+<!-- payment.component.html -->
+
+<div class="payment-container">
+    <mat-card>
+      <mat-card-title>Payment Details</mat-card-title>
+      <mat-card-content>
+        <form class="payment-form">
+          <mat-form-field>
+            <mat-label>Card Number</mat-label>
+            <input matInput placeholder="Enter card number" [(ngModel)]="cardNumber" name="cardNumber" required>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Cardholder's Name</mat-label>
+            <input matInput placeholder="Enter cardholder's name" [(ngModel)]="cardholderName" name="cardholderName" required>
+          </mat-form-field>
+          
+          <div class="cvv-expiration-container">
+            <mat-form-field>
+              <mat-label>CVV</mat-label>
+              <input matInput placeholder="Enter CVV" [(ngModel)]="cvv" name="cvv" required>
+            </mat-form-field>
+            
+            <mat-form-field>
+              <mat-label>Expiration Date</mat-label>
+              <input matInput placeholder="Enter expiration date" [(ngModel)]="expirationDate" name="expirationDate" required>
+            </mat-form-field>
+          </div>
+          
+          <button 
+            mat-raised-button color="primary" routerLink="/products" 
+            (click)="submitPayment()"
+          >Submit Payment
+        </button>
+        
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

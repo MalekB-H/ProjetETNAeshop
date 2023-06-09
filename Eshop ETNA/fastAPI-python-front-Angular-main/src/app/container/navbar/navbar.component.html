@@ -1,0 +1,64 @@
+<mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
+    <a routerLink="products" class="text-decoration-none font-weight-bold fs-4 text-dark">WetheNotNew</a>
+    <a routerLink="login" class="text-decoration-none text-align-start text-dark small">Login</a>
+    <a routerLink="profile" class="text-decoration-none text-start text-dark small">Profile</a>
+    <a routerLink="add" class="text-decoration-none text-start text-dark small">New Offer</a>
+    
+    <div class="d-flex justify-content-center">
+      <form class="example-form mt-2 flex-grow-1">
+        <div class="input-group w-300">
+          <mat-form-field class="example-full-width">
+            <span matPrefix> </span>
+            <input type="tel" matInput placeholder="Search" name="search" [(ngModel)]="search">
+            <button matSuffix mat-button (click)="onClickSearch()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon
+        [matBadge]="itemsQuantity"
+        [matBadgeHidden]="!itemsQuantity"
+        matBadgeColor="warn"
+      >shopping_cart</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <div class="p-3 divide-y divide-solid">
+            <div class="pb-3 flex justify-between">
+                <span class="mr-16">{{itemsQuantity}} Items</span>
+                <a class="text-decoration-none" routerLink="cart">View Cart</a>
+            </div>
+            <div *ngIf="cart.items.length" class="py-3">
+                <div 
+                  *ngFor="let item of cart.items"
+                  class="flex justify-between font-light mb-2"
+                  >
+                  <span>{{ truncateName(item.name) }}</span> x {{item.quantity}}
+                  <span class="font-bold">{{ item.price | currency }}</span>
+                </div>
+            </div>
+            <div class="flex justify-between py-3 font-light">
+              Total:
+              <span class="font-bold">{{ getTotal(cart.items) | currency }}</span>
+            </div>
+            <div>
+              <div class="pt-3 flex justify-between">
+                <button 
+                  (click)="onClearCart()"
+                  class="bg-rose-600 text-white rounded-full w-9 h-9"
+                >
+                  <mat-icon>remove_shopping_cart</mat-icon>
+                </button>
+                <button 
+                  routerLink="cart"
+                  class="bg-green-600 text-white rounded-full w-9 h-9">
+                  <mat-icon>shopping_cart</mat-icon>
+                </button>
+              </div>
+            </div>
+        </div>
+    </mat-menu>
+</mat-toolbar>

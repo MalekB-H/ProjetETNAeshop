@@ -1,0 +1,28 @@
+<mat-card class="max-w-7xl mx-auto border-x min-h-full">
+    <div class="container" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+
+        <div class="col-4">
+            <!--Username input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="username" type="text" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Username</label>
+            </div>
+            
+            <!--Password input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="password" type="password" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Password</label>
+            </div>
+
+            <!--Submit button-->
+            <button class="btn btn-primary btn-block col-12" (click)="login()">Sign in</button>
+
+            <!--Register button-->
+            <div class="text-center">
+                <p>Not a member ?<a href="/register"> Register</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</mat-card>

@@ -1,0 +1,47 @@
+<mat-card class="max-w-7xl mx-auto border-x min-h-full">
+    <div class="container" style="padding: 5%;">
+    <div class="row justify-content-md-center">
+
+        <div class="col-4">
+            <!--Username input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="user.username" type="text" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Username</label>
+            </div>
+            
+            <!--Password input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="user.password" type="password" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Password</label>
+            </div>
+
+            <!--Email input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="user.email" type="text" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Email</label>
+            </div>
+
+            <!--Adresse input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="user.adresse" type="text" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Adresse</label>
+            </div>
+
+            <!--Phone number input-->
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="user.phone_number" type="text" id="form2Example1" class="form-control">
+                <label class="form-label" for="form2Example1">Phone number</label>
+            </div>
+
+            <!--Submit button-->
+            <button class="btn btn-primary btn-block col-12" (click)="register()">Register</button>
+
+            <!--Register button-->
+            <div class="text-center">
+                <p>Already member ?<a href="/login"> Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</mat-card>
+
